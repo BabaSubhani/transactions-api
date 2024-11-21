@@ -1,0 +1,28 @@
+### Add a User
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+  "username": "Sia sai"
+}
+
+### Add a Transaction
+POST http://localhost:5000/api/transactions
+Content-Type: application/json
+
+{
+  "amount": 2400.0,
+  "transaction_type": "DEPOSIT",
+  "user_id": 9
+}
+
+### Get Transactions for a User
+GET http://localhost:5000/api/transactions?user_id=8
+
+### Update Transaction Status
+PUT http://localhost:5000/api/transactions/2
+Content-Type: application/json
+
+{
+  "status": "COMPLETED"
+}
